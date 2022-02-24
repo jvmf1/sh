@@ -1,5 +1,5 @@
 #!/bin/sh
-battery="/sys/class/power_supply/BAT1"
+battery="/sys/class/power_supply/BAT*"
 case "$(cat "$battery/status")" in
 	"Full") status="!" ;;
 	"Discharging") status="-" ;;
